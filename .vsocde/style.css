@@ -77,11 +77,11 @@ body * {
     left: 0;
     transform: translateY(-50%);
     top: 50%;
+    animation: slide-out 0.4s forwards;
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
 }
 
 #switch span{
@@ -151,6 +151,7 @@ ul li a:hover{
     
 }
 
+/*change background to any device*/
 @media (min-width:700px){ 
     :root{
         --bg-url: url(./assets/bg-desktop.jpg)
@@ -160,3 +161,21 @@ ul li a:hover{
     }
 }
 
+/* animations */
+@keyframes slide-in {
+    from{ 
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+    to {
+        left:0;
+    }
+}
