@@ -43,6 +43,7 @@ body * {
 #profile {
     text-align: center;
     padding: 40px;
+    rotate: none;
 }
 
 #profile img {
